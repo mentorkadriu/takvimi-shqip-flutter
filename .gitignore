@@ -37,9 +37,6 @@ ios/Pods/
 macos/Flutter/GeneratedPluginRegistrant.swift
 macos/Flutter/ephemeral
 
-# Web
-web/
-
 # IDE
 .idea/
 .vscode/
@@ -58,3 +55,5 @@ web/
 .svn/
 .swiftpm/
 migrate_working_dir/
+.vercel
+.env*.local
