@@ -383,10 +383,12 @@ class _ToggleRow extends StatelessWidget {
           Switch(
             value: value,
             onChanged: onChanged,
-            activeThumbColor: AppColors.emerald400,
-            activeTrackColor: AppColors.emerald700.withValues(alpha: 0.5),
-            inactiveThumbColor: Colors.white.withValues(alpha: 0.35),
-            inactiveTrackColor: Colors.white.withValues(alpha: 0.1),
+            thumbColor: WidgetStateProperty.resolveWith((states) => states.contains(WidgetState.selected)
+                ? AppColors.emerald400
+                : Colors.white.withValues(alpha: 0.35)),
+            trackColor: WidgetStateProperty.resolveWith((states) => states.contains(WidgetState.selected)
+                ? AppColors.emerald700.withValues(alpha: 0.5)
+                : Colors.white.withValues(alpha: 0.1)),
             trackOutlineColor: WidgetStateProperty.all(Colors.transparent),
           ),
         ],
@@ -560,10 +562,12 @@ class _PrayerToggle extends StatelessWidget {
               Switch(
                 value: value,
                 onChanged: onChanged,
-                activeThumbColor: AppColors.emerald400,
-                activeTrackColor: AppColors.emerald700.withValues(alpha: 0.5),
-                inactiveThumbColor: Colors.white.withValues(alpha: 0.35),
-                inactiveTrackColor: Colors.white.withValues(alpha: 0.1),
+                thumbColor: WidgetStateProperty.resolveWith((states) => states.contains(WidgetState.selected)
+                    ? AppColors.emerald400
+                    : Colors.white.withValues(alpha: 0.35)),
+                trackColor: WidgetStateProperty.resolveWith((states) => states.contains(WidgetState.selected)
+                    ? AppColors.emerald700.withValues(alpha: 0.5)
+                    : Colors.white.withValues(alpha: 0.1)),
                 trackOutlineColor: WidgetStateProperty.all(Colors.transparent),
               ),
             ],
