@@ -2,6 +2,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
 import '../theme/app_theme.dart';
+import '../widgets/install_banner.dart';
 import 'home_screen.dart';
 import 'qibla_screen.dart';
 import 'settings_screen.dart';
@@ -24,14 +25,19 @@ class _MainShellState extends State<MainShell> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.darkBg,
-      extendBody: true,
-      body: IndexedStack(index: _idx, children: _screens),
-      bottomNavigationBar: _FloatingNav(
-        currentIndex: _idx,
-        onTap: (i) => setState(() => _idx = i),
-      ),
+    return Stack(
+      children: [
+        Scaffold(
+          backgroundColor: AppColors.darkBg,
+          extendBody: true,
+          body: IndexedStack(index: _idx, children: _screens),
+          bottomNavigationBar: _FloatingNav(
+            currentIndex: _idx,
+            onTap: (i) => setState(() => _idx = i),
+          ),
+        ),
+        const InstallBanner(),
+      ],
     );
   }
 }
