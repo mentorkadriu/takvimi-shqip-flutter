@@ -100,7 +100,7 @@ flutter build ios --release
 
 ## Data Source
 
-Prayer times are sourced from the **Islamic Community of Kosovo (BIK)** official takvim for 2026, bundled as a local JSON asset. The reference point is Deçan (westernmost Kosovo city) with city-specific minute offsets.
+Prayer times are sourced from the **Islamic Community of Kosovo (BIK)** official takvim for 2026, bundled as a local JSON asset.
 
 **Calculation method:** BIM Kosovo — Fajr angle 18°, Isha angle 17°, Temkin 6 min.
 
